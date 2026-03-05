@@ -1,0 +1,11 @@
+{
+  "name": "warp-memory",
+  "version": "1.0.0",
+  "description": "Session memory system that captures problem-solving patterns in Neo4j and serves them via MCP",
+  "author": {"name": "Dominic Beck"},
+  "repository": "https://github.com/doicbek/warp-memory",
+  "license": "MIT",
+  "keywords": ["memory", "neo4j", "session", "patterns"],
+  "skills": "./skills",
+  "mcpServers": "./.mcp.json"
+}

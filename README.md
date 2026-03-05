@@ -34,21 +34,40 @@ MCP Server (mcp_server.py)
 pip install neo4j mcp
 ```
 
-### Install
+### Install as Claude Code Plugin
+
+```bash
+# Install directly from GitHub
+claude plugin add --url https://github.com/doicbek/warp-memory
+
+# Or install from a local clone
+git clone git@github.com:doicbek/warp-memory.git ~/.claude/warp-memory
+claude --plugin-dir ~/.claude/warp-memory
+```
+
+This registers the MCP server and the `/warp-up` skill automatically.
+
+### Start Neo4j
+
+```bash
+# Start Neo4j and initialize schema
+bash ~/.claude/warp-memory/setup.sh
+```
+
+### Legacy Install (manual)
+
+If you prefer to set things up manually without the plugin system:
 
 ```bash
 # Clone into Claude Code config directory
 git clone git@github.com:doicbek/warp-memory.git ~/.claude/warp-memory
-
-# Start Neo4j and initialize schema
-bash ~/.claude/warp-memory/setup.sh
 
 # Register MCP server (user scope, available to all projects)
 claude mcp add --transport stdio --scope user warp-memory -- python3 ~/.claude/warp-memory/mcp_server.py
 
 # Install the warp-up skill
 mkdir -p ~/.claude/skills/warp-up
-cp SKILL.md ~/.claude/skills/warp-up/SKILL.md
+cp ~/.claude/warp-memory/skills/warp-up/SKILL.md ~/.claude/skills/warp-up/SKILL.md
 ```
 
 ## Usage
@@ -125,3 +144,7 @@ NEO4J_URI = "bolt://localhost:7687"
 NEO4J_USER = "neo4j"
 NEO4J_PASSWORD = "password"
 ```
+
+## License
+
+MIT
