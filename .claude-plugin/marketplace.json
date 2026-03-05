@@ -1,0 +1,26 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "warp-memory-marketplace",
+  "description": "Session memory system that captures problem-solving patterns in Neo4j and serves them via MCP",
+  "metadata": {
+    "description": "Marketplace for the warp-memory plugin - a session memory system that captures problem-solving patterns in Neo4j and serves them via MCP",
+    "version": "1.0.0"
+  },
+  "owner": {
+    "name": "Dominic Beck"
+  },
+  "plugins": [
+    {
+      "name": "warp-memory",
+      "description": "Session memory system for Claude Code. Captures problem-solving patterns, debugging strategies, and tool usage workflows from session transcripts and stores them in a Neo4j graph database. Query relevant memories via MCP in future sessions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Dominic Beck"
+      },
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/doicbek/warp-memory",
+      "keywords": ["memory", "neo4j", "session", "patterns", "mcp"]
+    }
+  ]
+}

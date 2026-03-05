@@ -23,7 +23,17 @@ MCP Server (mcp_server.py)
   Available to all sessions + sub-agents
 ```
 
-## Setup
+## Install
+
+### Via Claude Code Plugin Marketplace (recommended)
+
+```bash
+# Add the marketplace
+claude plugin marketplace add doicbek/warp-memory
+
+# Install the plugin
+claude plugin install warp-memory
+```
 
 ### Prerequisites
 
@@ -34,7 +44,16 @@ MCP Server (mcp_server.py)
 pip install neo4j mcp
 ```
 
-### Install
+### Post-install setup
+
+```bash
+# Start Neo4j and initialize schema
+bash ~/.claude/warp-memory/setup.sh
+```
+
+### Manual Install
+
+If you prefer not to use the marketplace:
 
 ```bash
 # Clone into Claude Code config directory
